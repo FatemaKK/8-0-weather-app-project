@@ -17,7 +17,6 @@ main {
     grid-template-columns: 3fr 1fr;
 }
 
-
 .print {
     background-color: rgb(208, 206, 206);
     border: 1px solid rgb(57, 138, 84);
@@ -31,17 +30,14 @@ main {
     padding-left: 8px;
 }
 
-ul {
-    list-style: none;
-}
-/* .searchIndent p {
-    text-indent: 60px;
-} */
-
 .forecast {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     text-align: center;
     padding: 20px;
+}
+
+ul {
+    list-style: none;
 }
 

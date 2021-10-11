@@ -58,11 +58,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
         let printHistory = document.querySelector(".history ul");
         let historyList = document.querySelector("li");
         console.log(historyList);
-        if (historyList.textContent === "No previous searches."){
+        if (historyList.textContent === "No previous searches"){
             printHistory.innerHTML = `<li><a href="#" value="${location}" name="test">${location}</a> - ${currentTemp}°F</li>`;
         } else {
             printHistory.innerHTML += `<li><a href=#" value="${location}" name="test">${location}</a> - ${currentTemp}°F</li>`;
         }
+        
             let items = document.querySelectorAll("a")
                 items.forEach((item) => {
                 item.addEventListener("click", (event) => {
