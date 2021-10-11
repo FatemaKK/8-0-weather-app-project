@@ -1,17 +1,24 @@
+body {
+    padding: 14px;
+}
 header {
     background-color: rgb(107, 198, 189);
     border: 2px solid rgb(22, 22, 22);
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 20px;
+    padding: 20px;
     color: white;
     text-align: center;
 }
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+}
+
+.divider {
+    margin: 0px 240px;
 }
 
 .display {
@@ -19,17 +26,22 @@ main {
     border: 1px solid rgb(57, 138, 84);
     text-align: center;
     padding: 18px;
-    margin-left: 240px;
-    width: 600px;
-    /* min-width: 200px; */
 }
 
 .history {
     background-color: white;
     border: 2px white;
-    padding-left: 2px;
+    padding-left: 8px;
 }
 
-p {
+.searchIndent p {
     text-indent: 60px;
 }
+
+.forecast {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    text-align: center;
+    padding: 20px;
+}
+
