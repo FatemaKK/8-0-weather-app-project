@@ -4,7 +4,7 @@ body {
 header {
     background-color: rgb(107, 198, 189);
     border: 2px solid rgb(22, 22, 22);
-    width: 1000px;
+    width: 1400px;
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
@@ -17,11 +17,8 @@ main {
     grid-template-columns: 3fr 1fr;
 }
 
-.divider {
-    margin: 0px 240px;
-}
 
-.display {
+.print {
     background-color: rgb(208, 206, 206);
     border: 1px solid rgb(57, 138, 84);
     text-align: center;
@@ -34,9 +31,12 @@ main {
     padding-left: 8px;
 }
 
-.searchIndent p {
-    text-indent: 60px;
+ul {
+    list-style: none;
 }
+/* .searchIndent p {
+    text-indent: 60px;
+} */
 
 .forecast {
     display: grid;
