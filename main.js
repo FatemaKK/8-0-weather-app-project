@@ -14,14 +14,26 @@ document.querySelector("form").addEventListener("submit", (event) => {
         let country = weather.nearest_area[0].country[0].value;
         let currentTemp = weather.current_condition[0].FeelsLikeF;
         
+        //worked with Bill to capitalize the First Letter
+        function capitalizeFirstLetter(words) {
+            const wordsArray = words.split(" ")
+            const newWords = []
+            for (let word of wordsArray) {
+                const newWord = word[0].toUpperCase() + word.slice(1).toLowerCase()
+                newWords.push(newWord)
+            }
+            return newWords.join(" ")
+        } 
+        let upperLocation = capitalizeFirstLetter(location)
+
         displayArea.innerHTML = 
-        `<h2>${location}</h2>
+        `<h2>${upperLocation}</h2>
         <p class="center"><strong>Area:</strong> ${area}</p>
         <p class="center"><strong>Region:</strong> ${region}</p>
         <p><strong>Country:</strong> ${country}</p>
         <p><strong>Currently:</strong> Feels Like ${currentTemp}°F</p>`;
-        
-        //displays three day forecast
+                
+        //displays three day weather forecast
         let today = document.querySelector(".today");
         let averageTemp1 = weather.weather[0].avgtempF;
         let minTemp1 = weather.weather[0].mintempF;
@@ -130,7 +142,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
             });
         });
     })
-        //alerts user ... input field cannot be empty
+    //alerts user ... input field cannot be empty
         .catch((error) => {
         alert("Invalid Entry, Input cannot be Empty") 
     });  
